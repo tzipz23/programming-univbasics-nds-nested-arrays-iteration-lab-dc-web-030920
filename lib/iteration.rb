@@ -45,14 +45,14 @@ def total_even_pairs(src)
   
    
   row = 0
-  total = 0
+  array = []
   while row < src.length do
-    if src[row][0] % 2 == 0 && src[row][1] % 2 == 0
-      total += src[row][0]
-      total += src[row][1]
+    if src[row][0] > src[row][1]
+      array.push(src[row][0])
+    else
+      array.push(src[row][1])
     end
-    row += 1
+      row += 1
   end
-  total
-    
+  array
 end
