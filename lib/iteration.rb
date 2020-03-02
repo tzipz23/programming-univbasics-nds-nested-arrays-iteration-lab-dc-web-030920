@@ -15,17 +15,18 @@ def join_ingredients(src)
 end
 
 def find_greater_pair(src)
-  
-  find_greater_pair = src{ [ :group1[-1, -900], :group2[10, 30], :group3[0, 0], :group4[14, 16 * -2.5]]}
-  
-  # array_2 = [
-    # [-1, -900].max,
-    # [10, 30].max,
-    # [0, 0].max,
-    # [14, 16 * -2.5].max
-    
-    array_2 = [ group1.max, group2.max, group3.max, group4.max]
-     
+  row = 0
+  array = []
+  while row < src.length do
+    if src[row][0] > src[row][1]
+      array.push(src[row][0])
+    else
+      array.push(src[row][1])
+    end
+      row += 1
+  end
+  array
+end
   
     
   
